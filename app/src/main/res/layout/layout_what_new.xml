@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:indicator="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/whatNewPages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:importantForAccessibility="no"
+        indicator:layout_constraintBottom_toTopOf="@+id/pageIndicator"
+        indicator:layout_constraintHeight_percent="1"
+        indicator:layout_constraintStart_toStartOf="parent"
+        indicator:layout_constraintTop_toTopOf="parent" />
+
+    <sarabjit.blog.welcomemodule.view.PagerIndicatorView
+        android:id="@+id/pageIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
+        indicator:indicator_active="@drawable/whats_new_pager_indicator_active_icon"
+        indicator:indicator_inactive="@drawable/whats_new_pager_indicator_inactive_icon"
+        indicator:layout_constraintBottom_toTopOf="@+id/primary_button_text"
+        indicator:layout_constraintEnd_toEndOf="parent"
+        indicator:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/secondary_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        indicator:layout_constraintBottom_toBottomOf="parent"
+        indicator:layout_constraintEnd_toEndOf="parent"
+        indicator:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/primary_button_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        indicator:layout_constraintBottom_toTopOf="@+id/secondary_button_text"
+        indicator:layout_constraintEnd_toEndOf="parent"
+        indicator:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

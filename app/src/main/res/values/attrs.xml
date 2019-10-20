@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PagerIndicatorView">
+        <attr name="indicator_active" format="reference" />
+        <attr name="indicator_inactive" format="reference" />
+    </declare-styleable>
+</resources>
